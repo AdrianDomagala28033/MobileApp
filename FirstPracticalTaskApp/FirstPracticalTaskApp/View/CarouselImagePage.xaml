@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstPracticalTaskApp.View.CarouselImagePage"
+              ItemsSource="{Binding ListOfPhoto}">
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage BackgroundColor="black">
+                <StackLayout VerticalOptions="Center">
+
+                    <Frame BorderColor="White" Margin="10" Padding="5">
+                        <Image Source="{Binding PhotoUrl}"
+                            WidthRequest="200"
+                            HeightRequest="200"
+                            BackgroundColor="Black"
+                        />
+                    </Frame>
+                    <Label Text="{Binding Name}"
+                           HorizontalOptions="Center"
+                           FontSize="24"
+                           TextColor="White"
+                           />
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+</CarouselPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:viewmodel="clr-namespace:CarouselPageApp.ViewModel"
+              x:Class="CarouselPageApp.MainPage"
+              ItemsSource="{Binding ListOfPhoto}">
+    <CarouselPage.BindingContext>
+        <viewmodel:PhotoInfoViewModel/>
+    </CarouselPage.BindingContext>
+
+    <!--<ContentPage>
+        <StackLayout VerticalOptions="Center">
+            <Label Text="Szrek"/>
+            <Image Source="https://assets.puzzlefactory.pl/puzzle/281/223/original.webp"
+                   WidthRequest="200"
+                   HeightRequest="200"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <StackLayout VerticalOptions="Center">
+            <Label Text="Łuk"/>
+            <Image Source="https://d-tm.ppstatic.pl/kadry/53/69/ee870911e18b949cae47f7e8e4b8.1000.jpg"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <StackLayout VerticalOptions="Center">
+            <Label Text="Zaic"/>
+            <Image Source="https://img.joemonster.org/i/2015/10/zajac_wilk12.jpg"/>
+        </StackLayout>
+    </ContentPage>-->
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage BackgroundColor="black">
+                <StackLayout VerticalOptions="Center">
+                    
+                    <Frame BorderColor="White" Margin="10" Padding="5">
+                        <Image Source="{Binding PhotoUrl}"
+                            WidthRequest="200"
+                            HeightRequest="200"
+                            BackgroundColor="Black"
+                        />
+                    </Frame>
+                    <Label Text="{Binding Name}"
+                           HorizontalOptions="Center"
+                           FontSize="24"
+                           TextColor="White"
+                           />
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+</CarouselPage>

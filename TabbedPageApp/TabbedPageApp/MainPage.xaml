@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabbedPageApp.MainPage"
+             xmlns:tabbedPageApp="clr-namespace:TabbedPageApp"
+             BarBackgroundColor="Black"
+             SelectedTabColor="LightGreen"
+             UnselectedTabColor="LightGray"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             >
+    <ContentPage Title="Another about" IconImageSource="time.png">
+        <Label Text="Welcome to another about page"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"/>
+    </ContentPage>
+    <tabbedPageApp:AboutPage 
+        Title="About"
+        IconImageSource="info.png"/>
+    <tabbedPageApp:CoursesPage 
+        Title="Courses"
+        IconImageSource="party.png"/>
+    <NavigationPage Title="History N" IconImageSource="time.png">
+        <x:Arguments>
+            <tabbedPageApp:HistoryPage 
+                Title="History"
+                IconImageSource="time.png"/>
+        </x:Arguments>
+    </NavigationPage>
+
+</TabbedPage>

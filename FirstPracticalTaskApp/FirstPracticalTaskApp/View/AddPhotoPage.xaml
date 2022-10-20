@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstPracticalTaskApp.View.AddPhotoPage"
+             x:Name="thisPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Image name:"/>
+            <Entry BindingContext="{x:Reference thisPage}" Text="{Binding Name}"/>
+            <Label Text="Image path:"/>
+            <Entry BindingContext="{x:Reference thisPage}" Text="{Binding Url}"/>
+            <Button Text="Add to DataBase" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

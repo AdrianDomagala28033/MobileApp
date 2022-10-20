@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstPracticalTaskApp.View.ImageListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome on list page"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Title}"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            <ListView ItemsSource="{Binding ListOfPhoto}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="Image name:" FontSize="Large"/>
+                                <Label Text="{Binding Name}" FontSize="Medium"/>
+                                <!--<Label Text="Photo path:"/>-->
+                                <!--<Label Text="{Binding PhotoUrl}"/>-->
+                                <Image Source="{Binding PhotoUrl}"/>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Back"
+                    x:Name="buttonReturn"
+                    Clicked="buttonReturn_Clicked"
+                    VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WalidacjaDanychApp.MainPage"
+             x:Name="thisPage"
+             BindingContext="{x:Reference thisPage}">
+
+    <StackLayout>
+        <Label Text="Podaj imię:"/>
+        <Entry x:Name="ImieEntry" Text="{Binding Imie}"/>
+        <Label Text="Podaj wiek:"/>
+        <Entry x:Name="WiekEntry" Text="{Binding Wiek}"/>
+        <Label x:Name="PrzywitanieLabel" TextColor="{Binding Kolor}" Text="{Binding Przywitanie}"/>
+        <Label x:Name="NiepelnoletnoscLabel" TextColor="{Binding Kolor}" Text="{Binding Niepelnoletnosc}"/>
+        <Button Text="Sprawdź poprawność danych"
+                x:Name="sprawdzButton"
+                Clicked="sprawdzButton_Clicked"/>
+        <Button Text="Sprawdź poprawność danych bindowaniem"
+                x:Name="spra iemButton"
+                Clicked="sprawdzBindowaniemButton_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
